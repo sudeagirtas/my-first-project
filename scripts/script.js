@@ -5,27 +5,33 @@ document.addEventListener('DOMContentLoaded', function() {
     let musicStarted = false;
     
     if (backgroundMusic) {
-        backgroundMusic.volume = 0.1; // Ses seviyesini daha da düşür
+        backgroundMusic.volume = 0.1;
         
-        // Otomatik başlatmayı dene
-        backgroundMusic.play().catch(function(error) {
-            console.log('Müzik otomatik başlatılamadı, kullanıcı etkileşimi bekleniyor');
-            
-            // Mobil için: herhangi bir tıklama veya dokunma ile müziği başlat
-            const startMusic = function() {
-                if (!musicStarted) {
-                    backgroundMusic.play().then(function() {
-                        musicStarted = true;
-                        console.log('Müzik başladı');
-                    }).catch(function(err) {
-                        console.log('Müzik başlatılamadı:', err);
-                    });
-                }
-            };
-            
-            // İlk tıklama/dokunma ile müziği başlat
-            document.body.addEventListener('click', startMusic, { once: true });
-            document.body.addEventListener('touchstart', startMusic, { once: true });
+        // Müziği başlatma fonksiyonu
+        const startMusic = function() {
+            if (!musicStarted) {
+                backgroundMusic.play().then(function() {
+                    musicStarted = true;
+                    console.log('Müzik başladı');
+                }).catch(function(err) {
+                    console.log('Müzik başlatılamadı:', err);
+                });
+            }
+        };
+        
+        // Hemen başlatmayı dene
+        startMusic();
+        
+        // Başarısız olursa ilk etkileşimde başlat
+        document.body.addEventListener('click', startMusic, { once: true });
+        document.body.addEventListener('touchstart', startMusic, { once: true });
+        document.body.addEventListener('keydown', startMusic, { once: true });
+        
+        // Sayfa görünür olduğunda da dene
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden && !musicStarted) {
+                startMusic();
+            }
         });
     }
     
