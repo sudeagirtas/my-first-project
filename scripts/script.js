@@ -2,10 +2,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Arka plan müziği otomatik başlat ve ses seviyesini ayarla
     const backgroundMusic = document.getElementById('backgroundMusic');
+    let musicStarted = false;
+    
     if (backgroundMusic) {
         backgroundMusic.volume = 0.1; // Ses seviyesini daha da düşür
+        
+        // Otomatik başlatmayı dene
         backgroundMusic.play().catch(function(error) {
-            console.log('Müzik otomatik başlatılamadı:', error);
+            console.log('Müzik otomatik başlatılamadı, kullanıcı etkileşimi bekleniyor');
+            
+            // Mobil için: herhangi bir tıklama veya dokunma ile müziği başlat
+            const startMusic = function() {
+                if (!musicStarted) {
+                    backgroundMusic.play().then(function() {
+                        musicStarted = true;
+                        console.log('Müzik başladı');
+                    }).catch(function(err) {
+                        console.log('Müzik başlatılamadı:', err);
+                    });
+                }
+            };
+            
+            // İlk tıklama/dokunma ile müziği başlat
+            document.body.addEventListener('click', startMusic, { once: true });
+            document.body.addEventListener('touchstart', startMusic, { once: true });
         });
     }
     
