@@ -1,5 +1,14 @@
 // Mobil menü toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Arka plan müziği otomatik başlat ve ses seviyesini ayarla
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    if (backgroundMusic) {
+        backgroundMusic.volume = 0.1; // Ses seviyesini daha da düşür
+        backgroundMusic.play().catch(function(error) {
+            console.log('Müzik otomatik başlatılamadı:', error);
+        });
+    }
+    
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     
