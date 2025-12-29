@@ -1,44 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 
 <head>
-    <title>Sudenin Mekanı</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordu - Yeşilin ve Mavinin Buluştuğu Şehir</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <h1>Welcome to the Sample Page</h1>
-    <h2>Subtitle</h2>
-    <h2>2. subtitle</h2>
-    <h3>3. başlık</h3>
-    <article class="container">
-        <div class="card">
-            <h2>Kart İsmı</h2>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloribus modi. Laudantium
-                expedita perspiciatis necessitatibus dignissimos officiis repudiandae reiciendis accusamus.</span>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">
+                <div class="logo-icon">
+                    <img src="assets/cotanak.jpg" alt="Çotanak">
+                </div>
+                ORDU
+            </h1>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Anasayfa</a></li>
+                <li><a href="gezilecek-yerler.html">Gezilecek Yerler</a></li>
+                <li><a href="lezzetler.html">Lezzetler</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div class="card">
-            <h2>Kart İsmı 2</h2>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt id aperiam totam. Iure veniam
-                distinctio
-                nulla voluptatibus delectus quia odio.</span>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ordu'ya Hoş Geldiniz</h1>
+            <p>Karadeniz'in incisi, doğanın ve tarihin iç içe geçtiği muhteşem şehir</p>
         </div>
-        <div class="card">
-            <h2>Kart İsmı 3</h2>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt id aperiam totam. Iure veniam
-                distinctio
-                nulla voluptatibus delectus quia odio.</span>
+    </section>
+
+    <section class="about-city">
+        <div class="container">
+            <h2>Ordu Hakkında</h2>
+            <p>Ordu, Karadeniz Bölgesi'nin en güzel illerinden biridir. Yeşil doğası, mavi denizi ve sıcakkanlı
+                insanlarıyla ziyaretçilerine unutulmaz anlar yaşatır. Fındık başkenti olarak bilinen Ordu, aynı zamanda
+                zengin tarihi ve kültürel mirası ile de dikkat çeker.</p>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>Doğal Güzellikler</h3>
+                    <p>Boztepe'nin muhteşem manzarası, Çambaşı Yaylası'nın eşsiz doğası ve kilometrelerce uzanan sahil
+                        şeridi ile Ordu, doğa severlerin gözdesi.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Tarih ve Kültür</h3>
+                    <p>Antik dönemlerden günümüze uzanan zengin bir tarihe sahip Ordu, Paşaoğlu Konağı ve Taşbaşı Kültür
+                        Merkezi gibi önemli yapıları barındırır.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Gastronomi</h3>
+                    <p>Hamsi, mısır ekmeği, karalahana çorbası ve tabii ki fındık... Ordu mutfağı, Karadeniz
+                        lezzetlerinin en güzel örneklerini sunar.</p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <h2>Kart İsmı 4</h2>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt id aperiam totam. Iure veniam
-                distinctio
-                nulla voluptatibus delectus quia odio.</span>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2>Ordu'dan Kareler</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/boztepe.jpg" alt="Boztepe Manzarası">
+                    <div class="gallery-caption">Boztepe Manzarası</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/cambasi.jpg" alt="Çambaşı Yaylası">
+                    <div class="gallery-caption">Çambaşı Yaylası</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/ordu-sahil.jpg" alt="Ordu Sahili">
+                    <div class="gallery-caption">Ordu Sahili</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/findik-bahcesi.jpg" alt="Fındık Bahçeleri">
+                    <div class="gallery-caption">Fındık Bahçeleri</div>
+                </div>
+            </div>
         </div>
-    </article>
-    <button id="btn" class="button">Bu butona bas</button>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ordu Tanıtım Web Sitesi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
     <script src="scripts/script.js"></script>
 </body>
 

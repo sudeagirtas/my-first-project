@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yöresel Lezzetler - Ordu</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">
+                <div class="logo-icon">
+                    <img src="assets/cotanak.jpg" alt="Çotanak">
+                </div>
+                ORDU
+            </h1>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="gezilecek-yerler.html">Gezilecek Yerler</a></li>
+                <li><a href="lezzetler.html" class="active">Lezzetler</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Yöresel Lezzetler</h1>
+        <p>Ordu'nun eşsiz mutfak kültürü</p>
+    </section>
+
+    <section class="food-section">
+        <div class="container">
+            <div class="food-intro">
+                <h2>Karadeniz Mutfağının Tadı</h2>
+                <p>Ordu mutfağı, Karadeniz'in taze deniz ürünleri ve yörenin bereketli topraklarından çıkan malzemelerle
+                    zenginleşir. Hamsi, mısır, fındık ve karalahana bu mutfağın vazgeçilmez unsurlarıdır.</p>
+            </div>
+
+            <div class="food-grid">
+                <div class="food-card">
+                    <div class="food-icon">🐟</div>
+                    <h3>Hamsi</h3>
+                    <p>Karadeniz'in en değerli balığı hamsi, Ordu mutfağının vazgeçilmezidir. Hamsi tava, hamsi
+                        buğulama, hamsili pilav ve daha nicesi...</p>
+                    <button class="recipe-btn" onclick="showRecipe('hamsi')">Tarif Gör</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🌽</div>
+                    <h3>Mısır Ekmeği</h3>
+                    <p>Karadeniz sofrasının baş tacı mısır ekmeği, hamsi ile mükemmel bir uyum sergiler. Geleneksel
+                        yöntemlerle yapılan bu ekmek, her öğünde masada yerini alır.</p>
+                    <button class="recipe-btn" onclick="showRecipe('misir')">Tarif Gör</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥗</div>
+                    <h3>Karalahana Sarması</h3>
+                    <p>Karadeniz'e özgü karalahana ile yapılan sarma, özellikle kış aylarında tercih edilen bir
+                        lezzettir. İçine konulan pirinç ve baharatlarla mükemmel bir tat oluşur.</p>
+                    <button class="recipe-btn" onclick="showRecipe('lahana')">Tarif Gör</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥘</div>
+                    <h3>Karalahana Çorbası</h3>
+                    <p>Kış aylarının vazgeçilmez çorbası, karalahana ile hazırlanır. Besleyici ve doyurucu bu çorba,
+                        soğuk havalarda ısınmanın en güzel yoludur.</p>
+                    <button class="recipe-btn" onclick="showRecipe('corba')">Tarif Gör</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🌰</div>
+                    <h3>Fındık</h3>
+                    <p>Ordu, Türkiye'nin fındık başkentidir. Taze fındık, fındık ezmesi, fındık şekeri gibi ürünler
+                        yörenin en önemli ihracat kalemlerinden biridir.</p>
+                    <button class="recipe-btn" onclick="showRecipe('findik')">Tarif Gör</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥧</div>
+                    <h3>Muhlama</h3>
+                    <p>Yayla mutfağının en özel lezzeti muhlama, peynir ve mısır unu ile hazırlanır. Özellikle Çambaşı
+                        Yaylası'nda taze taze tadabileceğiniz bu yemeği mutlaka deneyin.</p>
+                    <button class="recipe-btn" onclick="showRecipe('muhlama')">Tarif Gör</button>
+                </div>
+            </div>
+
+            <div class="recipe-modal" id="recipeModal">
+                <div class="recipe-content">
+                    <span class="close-modal" onclick="closeRecipe()">&times;</span>
+                    <h2 id="recipeTitle"></h2>
+                    <div id="recipeText"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="food-tip">
+        <div class="container">
+            <h2>Nerede Yenir?</h2>
+            <p>Ordu'da yöresel lezzetleri tatmak için sahil kenarındaki balık lokantalarını, şehir merkezindeki ev
+                yemekleri restoranlarını ve Boztepe'deki çay bahçelerini ziyaret edebilirsiniz. Özellikle hamsi
+                sezonunda (Ekim-Mart) balık lokantaları ziyaretçi akınına uğrar.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ordu Tanıtım Web Sitesi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
